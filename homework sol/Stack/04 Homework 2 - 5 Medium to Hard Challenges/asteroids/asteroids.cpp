@@ -1,6 +1,8 @@
 #include <iostream>
 #include <cassert>
 #include <string>
+#include <stack>
+#include <vector>
 using namespace std;
 
 class Stack {
@@ -13,7 +15,6 @@ public:
 		size(size), top(-1) {
 		array = new int[size];
 	}
-
 	~Stack() {
 		delete[] array;
 	}
@@ -47,37 +48,37 @@ public:
 		cout << "\n";
 	}
 };
-////////////////////////////////
-//      reverse_num          //
-///////////////////////////////
-int reverse_num(int n)
+vector<int> asteroid(vector<int> asteroids)
 {
-	Stack stk(15);
-	int rev = 0;
-	while (n)
+	Stack stk(50);
+	stk.push(-1);
+	vector<int> ast;
+	int i = 0;
+	for (int i = 0;  i < asteroids.size(); i++)
 	{
-		stk.push(n % 10);
-		n /= 10;
+		int aste = asteroids[i];
+		bool is_explode = false;
+		while (!stk.isEmpty() && stk.peek() > 0 && aste < 0)
+		{
+			if (stk.peek() < -aste)
+			{
+				stk.pop();
+				ast.pop_back();
+				continue;
+			}
+			else if (stk.peek() == -aste)
+			{
+				stk.pop();
+				ast.pop_back();
+			}
+			is_explode = true;
+			break;
+		}
+		if (!is_explode)
+		{
+			stk.push(aste);
+			ast.push_back(aste);
+		}
 	}
-	int i = 1;
-	while (!stk.isEmpty())
-	{
-		rev += stk.pop() * i;
-		i *= 10;
-	}
-	return rev;
-}
-int main()
-{
-    int to_rev1= 1234;
-    int to_rev2 = 54;
-    int to_rev3 = 134;
-    int to_rev4 = 31854;
-    int to_rev5 = 1;
-	cout << reverse_num(to_rev1) << endl;
-	cout << reverse_num(to_rev2) << endl;
-	cout << reverse_num(to_rev3) << endl;
-	cout << reverse_num(to_rev4) << endl;
-	cout << reverse_num(to_rev5) << endl;
-    return 0;
+	return ast;
 }
