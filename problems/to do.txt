@@ -1,0 +1,53 @@
+TO DO OVER ALL TIME
+->DSA
+  #DS
+   -single linked lists
+   1.revisit arrange odd even  //done
+   2.solve Adding 2 HUGE numbers // done
+   3.solve Remove all repeated //done
+   4.solve Reverse Chains
+______________________________________________________________
+   -doubly linked lists
+   1.solve Find the middle
+   2.solve Swap forward with backward
+   3.solve Reverse list nodes
+   4.solve Merge lists
+______________________________________________________________
+   -stack
+   1.solve Reverse a number using stack //Done
+   2.solve Valid Parentheses //Done
+   3.solve  Remove All Adjacent Duplicates In String //Done
+   4.solve Two stacks //Done
+   5.solve Asteroid Collision //Done
+   6.solve Insert at the bottom //Done
+   7.solve Reverse Stack
+   8.solve Score of Parentheses
+   9.solve Next Greater Element
+  10.solve Postfix Evaluation
+  11.solve Infix to Postfix with power ^
+  12.solve Stack with Middle
+______________________________________________________________
+   -Queue 
+   1.Dequeue // Done
+   2.impelement a stack using a single queue // Done
+   3.Queue using 2 Stacks dequeue //Done
+   4.priority queue 
+   5.Queue using 2 Stacks enqueue
+   6.Sum of last K numbers
+______________________________________________________________
+   -Binary Tree
+   1.Tree Max
+   2.Maximum Depth of Binary Tree
+   3.Path Sum
+   4.Sum of Left Leaves
+   5.Is Perfect Tree
+   6.Binary Tree Zigzag Level Order Traversal
+   7.Check Completeness of a Binary Tree
+   8.Binary Tree Diameter
+   9.Symmetric Tree
+   10.Flip Equivalent Binary Trees
+   11.Print all duplicate subtrees 
+______________________________________________________________
+   -Binary Search Tree
+   1.
+   2.s
